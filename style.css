@@ -1,0 +1,12 @@
+body{
+    background-image: url(./img/Estas-son-las-mejores-apps-de-fondos-de-pantalla-4K-y-QHD-para-2022.jpg);
+}
+h1{
+    color: aliceblue;
+}
+.cal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}

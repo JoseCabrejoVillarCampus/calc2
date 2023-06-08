@@ -9,19 +9,19 @@ class Calculadora
 
         foreach ($operadores as $operador) {//?iteramos cada operador
             if (strpos($operacion, $operador) !== false) {//!verifica si un operador específico está presente 
-                $partes = explode($operador, $operacion);//aca usamos explode para separar antes y desps del operador 
+                $partes = explode($operador, $operacion);//?aca usamos explode para separar antes y desps del operador 
 
                 if (count($partes) !== 2) {
                     echo $operacion;
-                    return;//validamos que al menos sean dos numeros para poder realizar la operacion
+                    return;//!validamos que al menos sean dos numeros para poder realizar la operacion
                 }
 
-                $num1 = floatval($partes[0]);//con floatval obtenemos el valor float de los valores en las posiciones deseada del array
-                $num2 = floatval($partes[1]);//cada vez que agregamos un operador, los valores de los nums cambian, num1 seria la operacion ya resuelta y num2 el nuevo numero
+                $num1 = floatval($partes[0]);//?con floatval obtenemos el valor float de los valores en las posiciones deseada del array
+                $num2 = floatval($partes[1]);//?cada vez que agregamos un operador, los valores de los nums cambian, num1 seria la operacion ya resuelta y num2 el nuevo numero
 
                 switch ($operador) {
                     case '+':
-                        $resultado = ($resultado === null) ? $num1 + $num2 : $resultado + $num2;//el operador ternario nos dice que si resultado es nulo , el resultado seria la resolucion de la operacion,pero si esta lleno seria el resultado anterior mas el nuevo
+                        $resultado = ($resultado === null) ? $num1 + $num2 : $resultado + $num2;// TODO: el operador ternario nos dice que si resultado es nulo , el resultado seria la resolucion de la operacion,pero si esta lleno seria el resultado anterior mas el nuevo
                         break;
                     case '-':
                         $resultado = ($resultado === null) ? $num1 - $num2 : $resultado - $num2;
